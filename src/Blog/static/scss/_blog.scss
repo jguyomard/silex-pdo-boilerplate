@@ -1,0 +1,7 @@
+.articles {
+  list-style-type: none;
+
+  li:before {
+    content: " - ";
+  }
+}

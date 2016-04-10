@@ -1,0 +1,16 @@
+/*.phar
+composer.lock
+/vendor
+/node_modules
+
+/var/*/*
+!/var/*/.git*
+
+/web/dist/*/*
+!/web/dist/*/.git*
+
+# IDE
+.idea
+.project
+
+

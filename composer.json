@@ -1,0 +1,26 @@
+{
+    "name": "jguyomard/silex-pdo-boilerplate",
+    "description": "A Boilerplate for Silex 2 using PDO",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julien Guyomard"
+        }
+    ],
+    "require": {
+        "silex/silex": "~2.0@dev",
+        "silex/web-profiler": "~2.0@dev",
+        "symfony/config": "^3.0",
+        "symfony/twig-bridge": "~2.7|3.0.*",
+        "symfony/monolog-bridge": "~2.7|3.0.*",
+        "csanquer/pdo-service-provider": "~1.1@dev",
+        "jeromemacias/silex-debug": "~2.0@dev"
+    },
+    "autoload": {
+        "psr-0": {"Blog": "src/"}
+    },
+    "require-dev": {
+        "symfony/browser-kit": "^3.0",
+        "symfony/css-selector": "^3.0"
+    }
+}

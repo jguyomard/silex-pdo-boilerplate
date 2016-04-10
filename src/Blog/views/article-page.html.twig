@@ -1,0 +1,12 @@
+{% extends 'layout/default.html.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="columns">
+            <h2>{{ article.getTitle() }}</h2>
+            <p>{{ article.getContent() }}</p>
+        </div>
+    </div>
+
+{% endblock %}
