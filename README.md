@@ -3,6 +3,7 @@
 This boilerplate is a fully functional [Silex](http://silex.sensiolabs.org/) Application. You can use it for your new applications.
 
 This boilerplate is configured with PDO Service Provider (instead of Doctrine, for instance) and Twig.
+It also comes with Gulp to build js/sass files (but you can find a version without gulp on [`master/no-npm`](https://github.com/jguyomard/silex-pdo-boilerplate/tree/master/no-npm) branch if you prefer).
 
 
 **Note:** I only make this boilerplate for my quick and fun projects.
@@ -18,7 +19,7 @@ Config is in `./config` directory.
 ## Creating a new Silex Application
 
 ```
-composer create-project jguyomard/silex-pdo-boilerplate ./myapp
+composer create-project jguyomard/silex-pdo-boilerplate ./myapp 2.0.x-dev
 cd ./myapp
 ```
 
@@ -28,6 +29,12 @@ Create a sql database, import `boilerplate.sql` and update `./config/dev.config.
 ```
 mysql -u ... < boilerplate.sql
 vi ./config/dev.config.php
+```
+
+To build js/sass files:
+```
+npm install
+gulp build
 ```
 
 To run this app with PHP built-in web server:
@@ -52,6 +59,25 @@ This Silex Boilerplate is configured with:
 * [DebugServiceProvider](https://github.com/jeromemacias/Silex-Debug) (~2.0@dev)
 * [MonologServiceProvider](http://silex.sensiolabs.org/doc/providers/monolog.html)
 
+
+### Front-End
+
+This *Gulp version* is also configured with :
+
+* [gulp](https://www.npmjs.com/package/gulp)
+* [gulp-sass](https://www.npmjs.com/package/gulp-sass)
+* [gulp-concat](https://www.npmjs.com/package/gulp-concat)
+* [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
+* [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
+* [browser-sync](https://www.npmjs.com/package/browser-sync)
+
+You can run :
+
+```
+gulp build                  // to build js/sass files with sourcemaps
+gulp build --production     // to build js/sass files
+gulp watch                  // to watch for files changes
+```
 
 ## Testing
 

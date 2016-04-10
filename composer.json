@@ -22,5 +22,10 @@
     "require-dev": {
         "symfony/browser-kit": "^3.0",
         "symfony/css-selector": "^3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master/gulp": "2.0.x-dev"
+        }
     }
 }
