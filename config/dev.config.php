@@ -11,12 +11,10 @@ $app['pdo.server'] = [
     'password' => 'root',
 ];
 
-$app['twig.options'] = [
+$app['twig.options'] = array_merge($app['twig.options'], [
     'cache' => false,
-    'strict_variables' => true,
     'debug' => true,
-    'autoescape' => true,
-];
+]);
 
 // Enable WebDebuger + VarDumper
 $app['debug'] = true;

@@ -30,9 +30,9 @@ $app['pdo.attributes'] = [
 $app['twig.path'] = __DIR__ . '/../src/Template/views/';
 
 $app['twig.options'] = [
-    'cache' => false,
+    'cache' => __DIR__ . '/../var/cache/twig/',
     'strict_variables' => true,
-    'debug' => true,
+    'debug' => false,
     'autoescape' => true,
 ];
 
