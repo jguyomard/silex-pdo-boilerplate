@@ -49,12 +49,10 @@ This Silex Boilerplate is configured with:
 ### Service Providers
 
 * [PDOServiceProvider](https://github.com/csanquer/PdoServiceProvider) (~1.1@dev)
-
 * [TwigServiceProvider](http://silex.sensiolabs.org/doc/providers/twig.html)
 * [UrlGeneratorServiceProvider](http://silex.sensiolabs.org/doc/providers/url_generator.html)
 * [ServiceControllerServiceProvider](http://silex.sensiolabs.org/doc/providers/service_controller.html)
 * [HttpFragmentServiceProvider](http://silex.sensiolabs.org/doc/providers/http_fragment.html)
-
 * [WebProfilerServiceProvider](https://github.com/silexphp/Silex-WebProfiler) (~2.0@dev)
 * [DebugServiceProvider](https://github.com/jeromemacias/Silex-Debug) (~2.0@dev)
 * [MonologServiceProvider](http://silex.sensiolabs.org/doc/providers/monolog.html)
