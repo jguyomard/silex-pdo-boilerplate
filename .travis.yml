@@ -7,14 +7,22 @@ php:
   - hhvm
   - nightly
 
+env:
+  global:
+    - DB_USER="root"
+    - DB_PASS=""
+
+services:
+  - mysql
+
 sudo: false
 
 cache:
-    directories:
-      - $HOME/.composer/cache
+  directories:
+    - $HOME/.composer/cache
 
 before_script:
-    - composer install
+  - mysql -e 'CREATE DATABASE silex_boilerplate;'
+  - composer install
 
 script: phpunit
-

@@ -38,6 +38,15 @@ class BlogTest extends WebTestCase
         require ROOT.'/config/'.$env.'.config.php';
         require ROOT.'/src/routes.php';
 
+        // Load DB ?
+        if (getenv('DB_USER') !== false && getenv('DB_PASS') !== false) {
+            $app['pdo.server'] = array_merge($app['pdo.server'], [
+                'user' => getenv('DB_USER'),
+                'password' => getenv('DB_PASS'),
+            ]);
+            $app['pdo']->exec(file_get_contents(ROOT.'/boilerplate.sql'));
+        }
+
         unset($app['exception_handler']);
         $app['debug'] = true;
         $app['session.test'] = true;
