@@ -39,11 +39,13 @@ class BlogTest extends WebTestCase
         require ROOT.'/src/routes.php';
 
         // Load DB ?
-        if (getenv('DB_USER') !== false && getenv('DB_PASS') !== false) {
-            $app['pdo.server'] = array_merge($app['pdo.server'], [
-                'user' => getenv('DB_USER'),
-                'password' => getenv('DB_PASS'),
-            ]);
+        $ciEnv = array_filter([
+            'user' => getenv('DB_USER'),
+            'password' => getenv('DB_PASS'),
+            'dbname' => getenv('DB_BASE'),
+        ], 'is_string');
+        if (!empty($ciEnv)) {
+            $app['pdo.server'] = array_merge($app['pdo.server'], $ciEnv);
             $app['pdo']->exec(file_get_contents(ROOT.'/boilerplate.sql'));
         }
 
