@@ -4,13 +4,12 @@ php:
   - 5.5.9
   - 5.6
   - 7.0
-  - hhvm
-  - nightly
 
 env:
   global:
     - DB_USER="root"
     - DB_PASS=""
+    - DB_BASE="silex_boilerplate"
 
 services:
   - mysql
