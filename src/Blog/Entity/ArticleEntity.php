@@ -17,6 +17,7 @@ class ArticleEntity
     {
         return $this->article_title;
     }
+
     public function setTitle($title)
     {
         $this->article_title = $title;
@@ -26,6 +27,7 @@ class ArticleEntity
     {
         return $this->article_description;
     }
+
     public function setContent($description)
     {
         $this->article_description = $description;

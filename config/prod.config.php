@@ -17,7 +17,7 @@ $app['pdo.server'] = [
 $app['pdo.options'] = [
     // optional PDO attributes used in PDO constructor 4th argument driver_options
     // see http://www.php.net/manual/fr/pdo.construct.php
-    \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"
+    \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'",
 ];
 
 $app['pdo.attributes'] = [
@@ -27,10 +27,10 @@ $app['pdo.attributes'] = [
 ];
 
 // Twig
-$app['twig.path'] = __DIR__ . '/../src/Template/views/';
+$app['twig.path'] = __DIR__.'/../src/Template/views/';
 
 $app['twig.options'] = [
-    'cache' => __DIR__ . '/../var/cache/twig/',
+    'cache' => __DIR__.'/../var/cache/twig/',
     'strict_variables' => true,
     'debug' => false,
     'autoescape' => true,
