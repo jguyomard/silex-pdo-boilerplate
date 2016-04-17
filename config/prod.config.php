@@ -40,4 +40,3 @@ $app['twig.options'] = [
 $app['app.blog'] = [
     'articlesPerPage' => 10,
 ];
-
