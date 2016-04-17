@@ -2,7 +2,6 @@
 
 /** @var \Silex\Application $app */
 
-
 /*
  * Register Service Providers
  */
@@ -26,7 +25,7 @@ $app['twig'] = $app->extend('twig', function ($twig, $app) {
     return $twig;
 });
 $app->extend('twig.loader.filesystem', function ($loader, $app) {
-    $loader->addPath(__DIR__ . '/Blog/views', 'Blog');
+    $loader->addPath(__DIR__.'/Blog/views', 'Blog');
 
     return $loader;
 });
@@ -39,7 +38,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 $app->error(function (\Exception $e, Request $request, $error) use ($app) {
     if ($app['debug']) {
-        return null;
+        return;
     }
 
     // 404.html, 5xx, or default.html

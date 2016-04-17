@@ -3,7 +3,7 @@
 namespace Blog\Repository;
 
 use Blog\Entity\ArticleEntity;
-use \PDO;
+use PDO;
 
 class ArticleRepository
 {
@@ -52,7 +52,7 @@ class ArticleRepository
             VALUES (:title)'
         );
         $query->execute([
-            'title' => $article->getTitle()
+            'title' => $article->getTitle(),
         ]);
 
         return $this->db->lastInsertId();
